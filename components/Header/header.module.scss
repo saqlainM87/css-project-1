@@ -1,0 +1,30 @@
+@import '@/styles/colors';
+
+.divider {
+    border-width: 1px;
+    height: 1.875rem;
+    border-color: $purple-1;
+}
+
+.badge{
+    :global{
+        .ant-badge-count{
+            background-color: $purple-2;
+            font-size: 0.75rem;
+            font-weight: 500;
+            min-width: 14px !important;
+            min-height: none;
+            width: 14px;
+            height: 14px;
+            top: 5px;
+            right: 5px;
+        }
+
+        .ant-scroll-number-only-unit{
+            position: relative;
+            top: -3px;
+        }
+    }
+}
+
+
