@@ -21,6 +21,9 @@ const config: Config = {
                 'custom-purple-1': '#937DC2',
                 'custom-purple-2': '#C689C6',
                 'text-color-1': '#4D4C4C',
+                'text-color-2': '#231F2D',
+                'text-color-3': '#7B7881',
+                'bg-color-1': '#F1F1F1',
             },
             // Breakpoints
             screens: {
