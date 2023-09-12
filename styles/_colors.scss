@@ -1,6 +1,6 @@
-$purple-1: #937DC2;
-$purple-2: #C689C6;
-$text-color-1:#4D4C4C;
-$text-color-2:#231F2D;
-$text-color-3:#7B7881;
-$bg-color-1: #F1F1F1;
+$purple-1: theme('colors.custom-purple-1');
+$purple-2: theme('colors.custom-purple-2');
+$text-color-1: theme('colors.text-color-1');
+$text-color-2: theme('colors.text-color-2');
+$text-color-3: theme('colors.text-color-3');
+$bg-color-1: theme('colors.bg-color-1');

@@ -1,23 +1,18 @@
 $mobile: 360px;
-$tablet: 768px;
-$desktop: 1440px;
-
+$tablet: theme('screens.md');
+$desktop: theme('screens.xl');
 
 @mixin screen($breakpoint) {
     @if $breakpoint == $mobile {
         @media (min-width: 360px) {
             @content;
         }
-    }
-
-    @else if $breakpoint == $tablet {
+    } @else if $breakpoint == $tablet {
         @media (min-width: 768px) and (max-width: 1439px) {
             @content;
         }
-    }
-
-    @else if $breakpoint == $desktop {
-        @media (min-width: 1440px)  {
+    } @else if $breakpoint == $desktop {
+        @media (min-width: 1440px) {
             @content;
         }
     }
