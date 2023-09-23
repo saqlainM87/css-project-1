@@ -2,7 +2,11 @@
 @import '@/styles/mixins';
 
 .carousalHeader {
-    font-size: 28px;
+    font-size: 1.75rem;
+
+    @include screen($tablet) {
+        font-size: 3rem;
+    }
 }
 
 .slider {
