@@ -1,0 +1,14 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.carousalHeader {
+    font-size: 28px;
+}
+
+.slider {
+    :global {
+        & .ant-row {
+            display: flex !important;
+        }
+    }
+}
