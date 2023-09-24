@@ -11,8 +11,20 @@
 
 .slider {
     :global {
-        & .ant-row {
+        .ant-row {
             display: flex !important;
+        }
+
+        .slick-slide {
+            @include screen($desktop) {
+                margin-left: 0.1rem;
+            }
+        }
+
+        .slick-list {
+            @include screen($tablet) {
+                max-height: 40rem;
+            }
         }
     }
 }
