@@ -1,5 +1,9 @@
+import HeroCarousal from '@/components/HeroCarousal/HeroCarousal';
+
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+        <div className="min-h-screen px-4 py-8 md:px-5 md:py-16 xl:py-24">
+            <HeroCarousal />
+        </div>
     );
 }

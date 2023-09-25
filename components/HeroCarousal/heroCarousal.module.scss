@@ -1,0 +1,30 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.carousalHeader {
+    font-size: 1.75rem;
+
+    @include screen($tablet) {
+        font-size: 3rem;
+    }
+}
+
+.slider {
+    :global {
+        .ant-row {
+            display: flex !important;
+        }
+
+        .slick-slide {
+            @include screen($desktop) {
+                margin-left: 0.1rem;
+            }
+        }
+
+        .slick-list {
+            @include screen($tablet) {
+                max-height: 40rem;
+            }
+        }
+    }
+}
