@@ -85,7 +85,7 @@ const HeroCarousal = () => {
                     xl={12}
                     className="flex justify-center lg:flex-wrap"
                 >
-                    <Typography.Text className="hidden lg:block basis-1/3 mr-auto text-text-color-5 text-lg tracking-widest pl-8 xl:pl-16 uppercase">
+                    <Typography.Text className="hidden lg:block basis-1/3 mr-auto text-text-color-5 text-lg tracking-widest pl-8 xl:pl-10 uppercase">
                         Autographed books + 30% discount
                     </Typography.Text>
                     <Image
