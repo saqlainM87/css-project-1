@@ -11,6 +11,10 @@ import styles from './heroCarousal.module.scss';
 
 import LeftIcon from '@/assets/icons/Chevron left.svg';
 import RightIcon from '@/assets/icons/Chevron right.svg';
+import TruckIcon from '@/assets/icons/Truck.svg';
+import StarIcon from '@/assets/icons/Star.svg';
+import BookIcon from '@/assets/icons/Book open.svg';
+
 import BookImage from '@/assets/images/book.png';
 
 const SLIDE_COUNT = 4;
@@ -112,6 +116,54 @@ const HeroCarousal = () => {
         ));
     };
 
+    const renderKeyPoints = () => (
+        <Row align="middle" className="gap-y-8 lg:justify-between">
+            <Col
+                xs={24}
+                md={12}
+                lg={7}
+                className="flex items-center gap-x-4 lg:justify-center"
+            >
+                <Image src={TruckIcon} alt="truck-icon" />
+                <Typography.Text className="my-0 text-xl md:text-2xl font-semibold">
+                    Free shiping over 50$
+                </Typography.Text>
+            </Col>
+
+            <Col className="hidden xl:block">
+                <div className="bg-custom-purple-1 w-[1px] h-20" />
+            </Col>
+
+            <Col
+                xs={24}
+                md={12}
+                lg={7}
+                className="flex items-center gap-x-4 lg:justify-center"
+            >
+                <Image src={StarIcon} alt="star-icon" />
+                <Typography.Text className="my-0 text-xl md:text-2xl font-semibold">
+                    Save loyalty points
+                </Typography.Text>
+            </Col>
+
+            <Col className="hidden xl:block">
+                <div className="bg-custom-purple-1 w-[1px] h-20" />
+            </Col>
+
+            <Col
+                xs={24}
+                md={12}
+                lg={7}
+                className="flex items-center gap-x-4 lg:justify-center"
+            >
+                <Image src={BookIcon} alt="book-icon" />
+                <Typography.Text className="my-0 text-xl md:text-2xl font-semibold">
+                    Read a few pages
+                </Typography.Text>
+            </Col>
+        </Row>
+    );
+
     return (
         <Row gutter={[{ xl: 36 }, 12]} justify="center">
             <Col className="hidden xl:flex gap-4 flex-wrap items-stretch basis-1 h-[19.5rem]">
@@ -135,6 +187,10 @@ const HeroCarousal = () => {
                     icon={<Image src={RightIcon} alt="prev-slide-button" />}
                     onClick={() => sliderRef.current?.slickNext()}
                 />
+            </Col>
+
+            <Col xs={24} className="my-10 md:my-16">
+                {renderKeyPoints()}
             </Col>
         </Row>
     );
