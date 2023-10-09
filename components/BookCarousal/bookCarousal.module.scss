@@ -1,0 +1,40 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.carousalHeader {
+    font-size: 1.75rem;
+
+    @include screen($tablet) {
+        font-size: 3rem;
+    }
+}
+
+.slider {
+    :global {
+        .ant-row {
+            display: flex !important;
+        }
+
+        .slick-slide {
+            width: auto !important;
+        }
+
+        .slick-list {
+            max-height: 20rem;
+
+            @include screen($tablet) {
+                max-height: 30rem;
+            }
+        }
+
+        .slick-track {
+            display: flex;
+            flex-wrap: nowrap;
+            column-gap: 1rem;
+
+            @include screen($tablet) {
+                column-gap: 2rem;
+            }
+        }
+    }
+}

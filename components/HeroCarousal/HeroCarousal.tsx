@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-import { useSignal } from '@preact/signals-react';
+import { useRef, useState } from 'react';
 import { Button, Col, Row, Typography } from 'antd';
 import Slider, { Settings } from 'react-slick';
 import cx from 'classnames';
@@ -20,7 +19,7 @@ import BookImage from '@/assets/images/book.png';
 const SLIDE_COUNT = 4;
 
 const HeroCarousal = () => {
-    const currentSlideIndex = useSignal<number>(0);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
     const sliderRef = useRef<Slider>(null);
 
     const settings: Settings = {
@@ -33,7 +32,7 @@ const HeroCarousal = () => {
         prevArrow: <></>,
         nextArrow: <></>,
         afterChange(currentSlide) {
-            currentSlideIndex.value = currentSlide;
+            setCurrentSlideIndex(currentSlide);
         },
         autoplay: true,
         autoplaySpeed: 4000,
@@ -110,7 +109,7 @@ const HeroCarousal = () => {
             <div
                 key={index}
                 className={cx('bg-custom-purple-1 w-[1px]', {
-                    'opacity-30': currentSlideIndex.value !== index,
+                    'opacity-30': currentSlideIndex !== index,
                 })}
             />
         ));
@@ -184,12 +183,12 @@ const HeroCarousal = () => {
                 />
                 <Button
                     className="rounded-full"
-                    icon={<Image src={RightIcon} alt="prev-slide-button" />}
+                    icon={<Image src={RightIcon} alt="next-slide-button" />}
                     onClick={() => sliderRef.current?.slickNext()}
                 />
             </Col>
 
-            <Col xs={24} className="my-10 md:my-16">
+            <Col xs={24} className="my-10 md:my-28">
                 {renderKeyPoints()}
             </Col>
         </Row>
