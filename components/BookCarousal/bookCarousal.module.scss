@@ -15,18 +15,6 @@
             display: flex !important;
         }
 
-        .slick-slide {
-            width: auto !important;
-        }
-
-        .slick-list {
-            max-height: 20rem;
-
-            @include screen($tablet) {
-                max-height: 50rem;
-            }
-        }
-
         .slick-track {
             display: flex;
             flex-wrap: nowrap;

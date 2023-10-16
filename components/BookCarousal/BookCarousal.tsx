@@ -36,6 +36,7 @@ const BookCarousal = ({ children }: BookCarousalProps) => {
         slidesToScroll: 1,
         cssEase: 'linear',
         swipeToSlide: true,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -64,26 +65,31 @@ const BookCarousal = ({ children }: BookCarousalProps) => {
     };
 
     return (
-        <Row gutter={[{ xl: 36 }, 12]} justify="center" align="middle">
-            <Col xl={2} className="hidden xl:flex justify-center">
+        <Row
+            gutter={[{ xl: 36 }, 12]}
+            justify="center"
+            align="middle"
+            className="relative"
+        >
+            <div className="hidden absolute left-[-2rem] xl:flex justify-center">
                 <Button
                     className="rounded-full"
                     icon={<Image src={LeftIcon} alt="prev-slide-button" />}
                     onClick={() => sliderRef.current?.slickPrev()}
                 />
-            </Col>
-            <Col xs={24} xl={20} className="xl:p-0">
+            </div>
+            <Col xs={24} xl={22} className="xl:p-0">
                 <Slider ref={sliderRef} {...settings} className={styles.slider}>
                     {children}
                 </Slider>
             </Col>
-            <Col xl={2} className="hidden xl:flex justify-center">
+            <div className="hidden absolute right-[-1.5rem] xl:flex justify-center">
                 <Button
                     className="rounded-full"
                     icon={<Image src={RightIcon} alt="next-slide-button" />}
                     onClick={() => sliderRef.current?.slickNext()}
                 />
-            </Col>
+            </div>
 
             <Col
                 xs={24}

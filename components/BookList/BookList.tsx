@@ -25,7 +25,7 @@ const BookList = () => {
                     Selected for you
                 </Typography.Text>
             </Col>
-            <Col>
+            <Col xs={24}>
                 <BookCarousal>{renderSelectedBooks()}</BookCarousal>
             </Col>
 

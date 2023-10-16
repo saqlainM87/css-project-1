@@ -13,6 +13,7 @@ import styles from './bookCard.module.scss';
 
 const { Meta } = Card;
 
+// TODO: Implement props
 const BookCard = () => {
     return (
         <div>
