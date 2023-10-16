@@ -26,6 +26,7 @@ const config: Config = {
                 'text-color-4': '#382C2C',
                 'text-color-5': 'rgba(32, 31, 31, 0.80)',
                 'text-color-6': '#313131',
+                'text-color-7': 'rgba(49, 49, 49, 0.80)',
                 'bg-color-1': '#F1F1F1',
             },
             // Breakpoints

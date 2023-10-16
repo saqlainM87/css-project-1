@@ -20,7 +20,7 @@ const BookList = () => {
 
     return (
         <Row>
-            <Col xs={24} className="mb-10">
+            <Col xs={24} className="mb-10 mt-4">
                 <Typography.Text className="text-2xl md:text-4xl font-semibold">
                     Selected for you
                 </Typography.Text>
@@ -29,7 +29,7 @@ const BookList = () => {
                 <BookCarousal>{renderSelectedBooks()}</BookCarousal>
             </Col>
 
-            <Col xs={24} className="mb-10 mt-28">
+            <Col xs={24} className="mb-10 mt-14">
                 <Typography.Text className="text-2xl md:text-4xl font-semibold">
                     You must buy it now
                 </Typography.Text>

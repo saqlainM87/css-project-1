@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactElement, useRef, useState } from 'react';
-import { Button, Col, Row, Typography } from 'antd';
+import { Button, Col, Row } from 'antd';
 import Slider, { Settings } from 'react-slick';
 import cx from 'classnames';
 import Image from 'next/image';
