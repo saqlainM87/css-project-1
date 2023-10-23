@@ -6,6 +6,7 @@ import { Content } from 'antd/es/layout/layout';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <Header />
                 <Content className="max-w-7xl mx-auto">{children}</Content>
+                <Footer />
             </body>
         </html>
     );
