@@ -19,67 +19,94 @@ import VisaIcon from '@/assets/icons/VISA-card-logo- 1.svg';
 import styles from './footer.module.scss';
 
 const Footer = () => {
+    const renderPaymentMethods = (className?: string) => {
+        return (
+            <div className={cx('flex flex-col md:flex-row gap-2', className)}>
+                <a href="">
+                    <span className="text-sm md:text-base">
+                        <Image src={PaypalIcon} alt="paypal" />
+                    </span>
+                </a>
+                <a href="">
+                    <span className="text-sm md:text-base">
+                        <Image src={MastercardIcon} alt="mastercard" />
+                    </span>
+                </a>
+                <a href="">
+                    <span className="text-sm md:text-base">
+                        <Image src={VisaIcon} alt="visa" />
+                    </span>
+                </a>
+            </div>
+        );
+    };
+
     return (
-        <div>
+        <div className="bg-custom-purple-1">
             <Row
-                className="mt-5 px-4 py-10 md:px-5 md:py-12 bg-custom-purple-1"
+                className="mt-5 px-4 py-10 md:px-5 md:py-12 max-w-7xl mx-auto"
                 gutter={[0, 32]}
             >
-                <Col xs={24} md={6}>
+                <Col xs={24} md={6} xl={3}>
                     <Link href="">
                         <Image src={LogoIcon} alt="logo" />
                     </Link>
                 </Col>
 
-                <Col xs={12} md={6} className="flex flex-col gap-5">
+                <Col xs={12} md={6} xl={3} className="flex flex-col gap-5">
                     <span className="text-sm md:text-base font-semibold text-white">
                         Categories
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Psychology
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Self-Help
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Romance
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Mystery
                     </span>
                 </Col>
 
-                <Col xs={12} md={6} className="flex flex-col gap-5">
+                <Col xs={12} md={6} xl={3} className="flex flex-col gap-5">
                     <span className="text-sm md:text-base font-semibold text-white">
                         For kids
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Games
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Comics
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Fantasy
                     </span>
                 </Col>
 
-                <Col xs={12} md={6} className="flex flex-col gap-5">
+                <Col xs={12} md={6} xl={3} className="flex flex-col gap-5">
                     <span className="text-sm md:text-base font-semibold text-white">
                         E-Books
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Fiction
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Historical
                     </span>
-                    <span className="text-sm md:text-base text-white">
+                    <span className="text-sm md:text-base text-white/80">
                         Horror
                     </span>
                 </Col>
 
-                <Col xs={12} md={6} className="flex flex-col gap-5 md:order-2">
+                <Col
+                    xs={12}
+                    md={6}
+                    xl={4}
+                    className="flex flex-col gap-5 md:order-2"
+                >
                     <span className="text-sm md:text-base font-semibold text-white">
                         Help & Contacts
                     </span>
@@ -89,7 +116,7 @@ const Footer = () => {
                         </span>
                         <a
                             href="tel:+445 87 999 0008"
-                            className="text-sm md:text-base text-white"
+                            className="text-sm md:text-base text-white/80"
                         >
                             <span>+445 87 999 000</span>
                         </a>
@@ -98,7 +125,7 @@ const Footer = () => {
                         <span>
                             <Image src={ClockIcon} alt="clock" />
                         </span>
-                        <span className="text-sm md:text-base text-white">
+                        <span className="text-sm md:text-base text-white/80">
                             Mo-Fri, 9 AM - 11 PM
                         </span>
                     </div>
@@ -107,7 +134,7 @@ const Footer = () => {
                             <Image src={MailIcon} alt="mail" />
                         </span>
                         <a href="mailto:b.world@store.ro">
-                            <span className="text-sm md:text-base text-white">
+                            <span className="text-sm md:text-base text-white/80">
                                 b.world@store.ro
                             </span>
                         </a>
@@ -117,7 +144,8 @@ const Footer = () => {
                 <Col
                     xs={12}
                     md={6}
-                    className="flex flex-col md:flex-row gap-2 self-end md:order-1"
+                    xl={24}
+                    className="flex flex-col md:flex-row gap-2 self-end md:order-1 xl:order-last"
                 >
                     <a href="">
                         <span className="text-sm md:text-base text-white">
@@ -134,11 +162,14 @@ const Footer = () => {
                             <Image src={TwitterIcon} alt="twitter" />
                         </span>
                     </a>
+
+                    {renderPaymentMethods('hidden xl:flex xl:ml-auto')}
                 </Col>
 
                 <Col
                     xs={12}
                     md={6}
+                    xl={3}
                     className="flex flex-col md:order-3 md:ml-auto"
                 >
                     <span className="text-sm text-white">
@@ -153,23 +184,8 @@ const Footer = () => {
                             Request a call
                         </Button>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-2">
-                        <a href="">
-                            <span className="text-sm md:text-base text-white">
-                                <Image src={PaypalIcon} alt="paypal" />
-                            </span>
-                        </a>
-                        <a href="">
-                            <span className="text-sm md:text-base text-white">
-                                <Image src={MastercardIcon} alt="mastercard" />
-                            </span>
-                        </a>
-                        <a href="">
-                            <span className="text-sm md:text-base text-white">
-                                <Image src={VisaIcon} alt="visa" />
-                            </span>
-                        </a>
-                    </div>
+
+                    {renderPaymentMethods('xl:hidden')}
                 </Col>
             </Row>
 
