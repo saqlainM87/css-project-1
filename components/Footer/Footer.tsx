@@ -22,45 +22,65 @@ const Footer = () => {
     return (
         <div>
             <Row
-                className="mt-5 px-4 py-10 bg-custom-purple-1"
+                className="mt-5 px-4 py-10 md:px-5 md:py-12 bg-custom-purple-1"
                 gutter={[0, 32]}
             >
-                <Col xs={24}>
+                <Col xs={24} md={6}>
                     <Link href="">
                         <Image src={LogoIcon} alt="logo" />
                     </Link>
                 </Col>
 
-                <Col xs={12} className="flex flex-col gap-5">
-                    <span className="text-sm font-semibold text-white">
+                <Col xs={12} md={6} className="flex flex-col gap-5">
+                    <span className="text-sm md:text-base font-semibold text-white">
                         Categories
                     </span>
-                    <span className="text-sm text-white">Psychology</span>
-                    <span className="text-sm text-white">Self-Help</span>
-                    <span className="text-sm text-white">Romance</span>
-                    <span className="text-sm text-white">Mystery</span>
+                    <span className="text-sm md:text-base text-white">
+                        Psychology
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Self-Help
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Romance
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Mystery
+                    </span>
                 </Col>
 
-                <Col xs={12} className="flex flex-col gap-5">
-                    <span className="text-sm font-semibold text-white">
+                <Col xs={12} md={6} className="flex flex-col gap-5">
+                    <span className="text-sm md:text-base font-semibold text-white">
                         For kids
                     </span>
-                    <span className="text-sm text-white">Games</span>
-                    <span className="text-sm text-white">Comics</span>
-                    <span className="text-sm text-white">Fantasy</span>
+                    <span className="text-sm md:text-base text-white">
+                        Games
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Comics
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Fantasy
+                    </span>
                 </Col>
 
-                <Col xs={12} className="flex flex-col gap-5">
-                    <span className="text-sm font-semibold text-white">
+                <Col xs={12} md={6} className="flex flex-col gap-5">
+                    <span className="text-sm md:text-base font-semibold text-white">
                         E-Books
                     </span>
-                    <span className="text-sm text-white">Fiction</span>
-                    <span className="text-sm text-white">Historical</span>
-                    <span className="text-sm text-white">Horror</span>
+                    <span className="text-sm md:text-base text-white">
+                        Fiction
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Historical
+                    </span>
+                    <span className="text-sm md:text-base text-white">
+                        Horror
+                    </span>
                 </Col>
 
-                <Col xs={12} className="flex flex-col gap-5">
-                    <span className="text-sm font-semibold text-white">
+                <Col xs={12} md={6} className="flex flex-col gap-5 md:order-2">
+                    <span className="text-sm md:text-base font-semibold text-white">
                         Help & Contacts
                     </span>
                     <div className="flex gap-2">
@@ -69,7 +89,7 @@ const Footer = () => {
                         </span>
                         <a
                             href="tel:+445 87 999 0008"
-                            className="text-sm text-white"
+                            className="text-sm md:text-base text-white"
                         >
                             <span>+445 87 999 000</span>
                         </a>
@@ -78,7 +98,7 @@ const Footer = () => {
                         <span>
                             <Image src={ClockIcon} alt="clock" />
                         </span>
-                        <span className="text-sm text-white">
+                        <span className="text-sm md:text-base text-white">
                             Mo-Fri, 9 AM - 11 PM
                         </span>
                     </div>
@@ -87,32 +107,40 @@ const Footer = () => {
                             <Image src={MailIcon} alt="mail" />
                         </span>
                         <a href="mailto:b.world@store.ro">
-                            <span className="text-sm text-white">
+                            <span className="text-sm md:text-base text-white">
                                 b.world@store.ro
                             </span>
                         </a>
                     </div>
                 </Col>
 
-                <Col xs={12} className="flex flex-col gap-2">
+                <Col
+                    xs={12}
+                    md={6}
+                    className="flex flex-col md:flex-row gap-2 self-end md:order-1"
+                >
                     <a href="">
-                        <span className="text-sm text-white">
+                        <span className="text-sm md:text-base text-white">
                             <Image src={FacebookIcon} alt="facebook" />
                         </span>
                     </a>
                     <a href="">
-                        <span className="text-sm text-white">
+                        <span className="text-sm md:text-base text-white">
                             <Image src={InstagramIcon} alt="instagram" />
                         </span>
                     </a>
                     <a href="">
-                        <span className="text-sm text-white">
+                        <span className="text-sm md:text-base text-white">
                             <Image src={TwitterIcon} alt="twitter" />
                         </span>
                     </a>
                 </Col>
 
-                <Col xs={12} className="flex flex-col">
+                <Col
+                    xs={12}
+                    md={6}
+                    className="flex flex-col md:order-3 md:ml-auto"
+                >
                     <span className="text-sm text-white">
                         If you have questions, you can contact us or we will do
                         it for you.
@@ -125,19 +153,19 @@ const Footer = () => {
                             Request a call
                         </Button>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <a href="">
-                            <span className="text-sm text-white">
+                            <span className="text-sm md:text-base text-white">
                                 <Image src={PaypalIcon} alt="paypal" />
                             </span>
                         </a>
                         <a href="">
-                            <span className="text-sm text-white">
+                            <span className="text-sm md:text-base text-white">
                                 <Image src={MastercardIcon} alt="mastercard" />
                             </span>
                         </a>
                         <a href="">
-                            <span className="text-sm text-white">
+                            <span className="text-sm md:text-base text-white">
                                 <Image src={VisaIcon} alt="visa" />
                             </span>
                         </a>
@@ -151,7 +179,7 @@ const Footer = () => {
                     styles.copyright
                 )}
             >
-                <span className="text-xs text-white opacity-60">
+                <span className="text-xs md:text-base text-white/60">
                     © All copyrights are reserved. B-World 2022.
                 </span>
             </div>
